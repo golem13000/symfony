@@ -4,8 +4,23 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-Acceuil" aria-selected="true">Acceuil</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-annonces" role="tab" aria-controls="pills-Annonces" aria-selected="false">Annonces</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-mention légal" role="tab" aria-controls="pills-mention légal" aria-selected="false">Mention légal</a>
+          </ul>
     </head>
     <body>
+        {% block menu %}{% endblock %}
+        <p>Menu de mon site</p>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
